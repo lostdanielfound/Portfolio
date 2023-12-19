@@ -13,9 +13,10 @@
     <body class="bg-cyan-400">
         <!--Navbar-->
         <nav class="p-8 bg-white shadow md:flex md:items-center md:justify-between">
-            <div class="flex justify-between items-center"> <!--Navbar Logo-->
+            <!--Navbar Logo-->
+            <div class="flex justify-between items-center"> 
                 <span class="text-2xl font-[Poppins] cursor-pointer">
-                    <a href="/">
+                    <a href="#">
                         <img class="h-8 px-2 inline" src="../assets/briefcase.png"/>
                         My Portfolio
                     </a>
@@ -25,7 +26,8 @@
                     <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
                 </span>
             </div>
-
+            
+            <!--Navbar List-->
             <ul name="navbarList" class="md:flex md:items-center md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
                 <li class="mx-4 my-6 md:my-0">
                     <a href="about" class="text-xl hover:text-cyan-500 duration-500">About me</a>
@@ -36,18 +38,23 @@
                 <li class="mx-4 my-4 md:my-0">
                     <a href="projects" class="text-xl hover:text-cyan-500 duration-500">Projects</a>
                 </li>
-
             </ul>
         </nav>
 
+        <section id="banner" class="bg-indigo-900 py-14">
+            <div class="container md:flex mx-auto px-2 flex justify-evenly">
+                <div class="w-1/2" id="image">
+                    <img class="w-36 h-36 rounded-full" src="../assets/Faceshots/face1.png" alt="Rounded avatar">
+                </div>
+                <div class="flex flex-col justify-center w-1/2 font-[Poppins]" id="information">
+                    <h1 class="text-3xl font-bold text-white">My Portfolio Site</h1>
+                    <h2 class="py-1 text-xl">Daniel Guzman</h2>
+                    <p>Github: https://github.com/lostdanielfound</p> 
+                </div>
+            </div>
+        </section>
 
 
-        <div class="Banner">
-            <!--
-                Will need to put a bunch of img elements to make a nice banner
-                full of pictures of me
-            -->
-        </div>
         <div class="CardsSection">
             <div class="aboutCard">
             </div>
