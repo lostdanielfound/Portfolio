@@ -11,80 +11,93 @@
         <title>Portfolio</title>
     </head>
     <body class="bg-cyan-400">
-        <!--Navbar-->
-        <nav class="p-8 bg-white shadow md:flex md:items-center md:justify-between">
-            <!--Navbar Logo-->
-            <div class="flex justify-between items-center"> 
-                <span class="text-2xl font-[Poppins] cursor-pointer">
-                    <a href="#">
-                        <img class="h-8 px-2 inline" src="../assets/briefcase.png"/>
-                        My Portfolio
-                    </a>
-                </span>
+        <header>
+            <!--Navbar-->
+            <nav class="p-8 bg-white shadow md:flex md:items-center md:justify-between">
+                <!--Navbar Logo-->
+                <div class="flex justify-between items-center"> 
+                    <span class="text-2xl font-[Poppins] cursor-pointer">
+                        <a href="#">
+                            <img class="h-8 px-2 inline" src="../assets/briefcase.png"/>
+                            My Portfolio
+                        </a>
+                    </span>
 
-                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
-                    <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
-                </span>
-            </div>
-            
-            <!--Navbar List-->
-            <ul name="navbarList" class="md:flex md:items-center md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-                <li class="mx-4 my-6 md:my-0">
-                    <a href="about" class="text-xl hover:text-cyan-500 duration-500">About me</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a href="hobbies" class="text-xl hover:text-cyan-500 duration-500">My hobbies</a>
-                </li>
-                <li class="mx-4 my-4 md:my-0">
-                    <a href="projects" class="text-xl hover:text-cyan-500 duration-500">Projects</a>
-                </li>
-            </ul>
-        </nav>
-        
-        <!--Banner-->
-        <section id="banner" class="bg-indigo-900 py-14">
-            <div class="container md:flex mx-auto px-2 flex justify-evenly">
-                <div class="w-1/2" id="image">
-                    <img class="w-36 h-36 rounded-full" src="../assets/Faceshots/face1.png" alt="Rounded avatar">
+                    <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                        <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                    </span>
                 </div>
-                <div class="flex flex-col justify-center w-1/2 font-[Poppins]" id="information">
-                    <h1 class="text-3xl font-bold text-white">My Portfolio Site</h1>
-                    <h2 class="py-1 text-xl">Daniel Guzman</h2>
-                    <p>Github: https://github.com/lostdanielfound</p> 
-                </div>
-            </div>
-        </section>
+                
+                <!--Navbar List-->
+                <ul name="navbarList" class="md:flex md:items-center md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                    <li class="mx-4 my-6 md:my-0">
+                        <a href="about" class="text-xl hover:text-cyan-500 duration-500">About me</a>
+                    </li>
+                    <li class="mx-4 my-6 md:my-0">
+                        <a href="hobbies" class="text-xl hover:text-cyan-500 duration-500">My hobbies</a>
+                    </li>
+                    <li class="mx-4 my-4 md:my-0">
+                        <a href="projects" class="text-xl hover:text-cyan-500 duration-500">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-        <!--Cards-->
-        <section id="cards" class="py-10 justify-evenly md:flex md:my-4">
-            <figure class="bg-white mx-2 max-w-sm rounded-lg overflow-hidden shadow-lg">
-                <img class="w-full" src="../assets/Faceshots/MeandBro.png"/>
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Who am I?</div>
-                    <p class="text-gray-700 text-base">
-                        Sometext explaining something cool about the work that I have done and what I'm going to do in the future
-                    </p>
+        <main>
+            <!--Banner-->
+            <section id="banner" class="bg-indigo-800 py-14">
+                <div class="container md:flex mx-auto px-2 flex justify-between">
+                    <div class="flex w-1/2 justify-center" id="image">
+                        <img class="border-2 border-gray-500 w-48 h-48 rounded-full shadow-lg" src="../assets/Faceshots/face1.png" alt="Rounded avatar">
+                    </div>
+                    <div class="flex flex-col justify-center w-1/2 font-[Poppins]" id="information">
+                        <h1 class="text-3xl font-bold text-white">My Portfolio Site</h1>
+                        <h2 class="py-1 text-xl">Daniel Guzman</h2>
+                        <p>Github: https://github.com/lostdanielfound</p> 
+                    </div>
                 </div>
-            </figure>
-            <figure class="bg-white mx-2 max-w-sm rounded-lg overflow-hidden shadow-lg">
-                <img class="w-full" src="../assets/Faceshots/MeandBro.png"/>
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Who am I?</div>
-                    <p class="text-gray-700 text-base">
-                        Sometext explaining something cool about the work that I have done and what I'm going to do in the future
-                    </p>
-                </div>
-            </figure>
-            <figure class="bg-white mx-2 max-w-sm rounded-lg overflow-hidden shadow-lg">
-                <img class="w-full" src="../assets/Faceshots/MeandBro.png"/>
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Who am I?</div>
-                    <p class="text-gray-700 text-base">
-                        Sometext explaining something cool about the work that I have done and what I'm going to do in the future
-                    </p>
-                </div>
-            </figure>
-        </section>
+            </section>
+
+            <!--Cards-->
+            <section id="cards" class="py-10 justify-evenly md:flex md:my-4">
+                <figure class="bg-white mx-2 max-w-sm rounded-lg overflow-hidden shadow-lg">
+                    <img class="w-full" src="../assets/Faceshots/MeandBro.png"/>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Who am I?</div>
+                        <p class="text-gray-700 text-base">
+                            I'm a striving Software Developer, ready to take on any challenge in the industry and to learn something new. 
+                            I currently live with an amazing brother who supports my field of study, and I have two awesome sisters who are interesting to say the least. 😊
+                        </p>
+                    </div>
+                </figure>
+                <figure class="bg-white mx-2 max-w-sm rounded-lg overflow-hidden shadow-lg">
+                    <img class="w-full" src="../assets/nextjsThumb.png"/>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Field of study</div>
+                        <p class="text-gray-700 text-base">
+                            I'm currently interesting in Web development as I'm found by how I can express my creativity online and can share with the open-source community.
+                        </p>
+                    </div>
+                </figure>
+                <figure class="bg-white mx-2 max-w-sm rounded-lg overflow-hidden shadow-lg">
+                    <img class="w-full" src="../assets/facts.jpg"/>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Quick Facts</div>
+                        <ul class="list-disc px-4">
+                            <li class="text-gray-700 text-base">
+                                Just recently graduated with a B.S. in Computer Science
+                            </li>
+                            <li class="text-gray-700 text-base">
+                                I can solve a 3x3 Rubik's cube in 10 seconds
+                            </li>
+                            <li class="text-gray-700 text-base">
+                                I may or may not be involved in the furry mafia
+                            </li>
+                        </ul>
+                    </div>
+                </figure>
+            </section>
+        </main> 
 
         <footer>
             <!--
