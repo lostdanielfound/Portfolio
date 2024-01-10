@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script> <!--Tailwind css import-->
+        <!--Ionicons import-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <title>Portfolio</title>
+    </head>
+    <body class="bg-cyan-400">
+        <header>
+            <!--Navbar-->
+            <nav class="p-8 bg-white shadow md:flex md:items-center md:justify-between">
+                <!--Navbar Logo-->
+                <div class="flex justify-between items-center"> 
+                    <span class="text-2xl font-[Poppins] cursor-pointer">
+                        <a href="index.html">
+                            <img class="h-8 px-2 inline" src="assets/briefcase.png"/>
+                            My Portfolio
+                        </a>
+                    </span>
+
+                    <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                        <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                    </span>
+                </div>
+                
+                <!--Navbar List-->
+                <ul name="navbarList" class="md:flex md:items-center md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                    <li class="mx-4 my-6 md:my-0">
+                        <a href="about.html" class="text-xl hover:text-cyan-500 duration-500">About me</a>
+                    </li>
+                    <li class="mx-4 my-6 md:my-0">
+                        <a href="hobbies.html" class="text-xl hover:text-cyan-500 duration-500">My hobbies</a>
+                    </li>
+                    <li class="mx-4 my-4 md:my-0">
+                        <a href="projects.html" class="text-xl hover:text-cyan-500 duration-500">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Cards -->
+            <div class="m-8 bg-white p-4 rounded-lg flex justify-center">
+                <p>I will be adding more projects soon and links to the Github repos too. &#128517;</p>
+            </div>
+            <section class="m-4 justify-evenly md:flex md:my-4">
+                <figure class="bg-white m-4 rounded-lg overflow-hidden shadow-lg md:max-w-sm">
+                    <img class="w-full" src="assets/project1.png" alt="Image of my todo-list project" />
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">CLI Todo-list</div>
+                        <p class="text-gray-700 text-base">
+                            Here is a nice CLI Todo-list app created using Golang, I wanted to experiment using Go so I tried creating
+                            a simple Todo-list app that the user can interact within the CLI. 
+                        </p>
+                    </div>
+                </figure>
+                <figure class="bg-white m-4 rounded-lg overflow-hidden shadow-lg md:max-w-sm">
+                    <img class="w-full" src="assets/project2.png" alt="Ranker image" />
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Web application: Ranker</div>
+                        <p class="text-gray-700 text-base">
+                            This was a web application that was created during a Hackathon competition at Chico state, I worked together 
+                            along side 3 talented guys to create an Elo ranking Application. 
+                        </p>
+                    </div>
+                </figure>
+                <figure class="bg-white m-4 rounded-lg overflow-hidden shadow-lg md:max-w-sm">
+                    <img class="w-full" src="assets/Project3.png" alt="Image of code from my labprinter parser" />
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">HP web console parser</div>
+                        <p class="text-gray-700 text-base">
+                            This was a quick small script that I made to have run in the background and check every other 5 minutes on whether the printers, in the library of where I worked, either ran out of paper or toner by parsing their web consoles.
+                        </p>
+                    </div>
+                </figure>
+            </section>
+        </main> 
+
+        <footer>
+            <!--
+                Include a github link and sources that were used to devop this web site
+            -->
+        </footer>
+
+        <script>
+            function Menu(e) {
+                let list = document.querySelector("ul[name='navbarList']");
+
+                e.name === 'menu-outline' ? 
+                (e.name = "close",
+                list.classList.add('top-[80px]'),
+                list.classList.add('opacity-100'))
+                : 
+                (e.name = "menu-outline",
+                list.classList.remove('top-[80px]'),
+                list.classList.remove('opacity-100'))
+            }
+        </script>
+    </body>
+</html>

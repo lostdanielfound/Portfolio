@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script> <!--Tailwind css import-->
+        <!--Ionicons import-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <title>Portfolio</title>
+    </head>
+    <body class="bg-cyan-400">
+        <header>
+            <!--Navbar-->
+            <nav class="p-8 bg-white shadow md:flex md:items-center md:justify-between">
+                <!--Navbar Logo-->
+                <div class="flex justify-between items-center"> 
+                    <span class="text-2xl font-[Poppins] cursor-pointer">
+                        <a href="index.html">
+                            <img class="h-8 px-2 inline" src="assets/briefcase.png"/>
+                            My Portfolio
+                        </a>
+                    </span>
+
+                    <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                        <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                    </span>
+                </div>
+                
+                <!--Navbar List-->
+                <ul name="navbarList" class="md:flex md:items-center md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                    <li class="mx-4 my-6 md:my-0">
+                        <a href="about.html" class="text-xl hover:text-cyan-500 duration-500">About me</a>
+                    </li>
+                    <li class="mx-4 my-6 md:my-0">
+                        <a href="hobbies.html" class="text-xl hover:text-cyan-500 duration-500">My hobbies</a>
+                    </li>
+                    <li class="mx-4 my-4 md:my-0">
+                        <a href="projects.html" class="text-xl hover:text-cyan-500 duration-500">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hobbies" class="m-8 rounded-lg bg-gray-50 p-2">
+                <div id="gaming" class="m-4 rounded-md shadow-sm p-2">
+                    <h3 class="text-xl mb-2">1. Gaming</h3>
+                    <img class="w-full rounded-lg" src="assets/Hobbie2b.jpeg" alt="An image of lethal company"/>
+                    <p class="text-gray-700 mt-2">
+                        I play mainly PC games such as Destiny 2, Fortnite, and Lethal Company. I also 
+                        play a subset of retro Pokemon games like Pokemon Crystal and Emerald on my freetime
+                        since they were my favorite when growing up.
+                    </p>
+                </div>
+                <div id="working-out" class="m-4 rounded-md shadow-sm p-2">
+                    <h3 class="text-xl mb-2">2. Working Out</h3>
+                    <img class="w-full rounded-lg" src="assets/Hobbie3.jpg"/>
+                    <p class="text-gray-700 mt-2">
+                        I won't lie, working out and having a healthy lifestyle is one of my personality traits. 
+                        I initially used Working out as a way to lost weight, but it eventually became a new lifestyle
+                        that I never thought I would fall in love with. 
+                    </p>
+                </div>
+                <div id="speedcubing" class="m-4 rounded-md shadow-sm p-2">
+                    <h3 class="text-xl mb-2">3. Speedcubing</h3>
+                    <img class="w-full rounded-lg" src="assets/Hobbie1.jpeg" alt="An image of someone turning a rubik's cube"/>
+                    <p class="text-gray-700 mt-2">
+                        At the age of 16, I learned how to solve a Rubik's cube, today I can solve it under 10 seconds.
+                        My brother and I are very involved in Speedcubing, we go to competitions to meet other speedcubers and 
+                        go head on at are favorite events. My main events are the big cubes: 6x6 & 7x7.
+                    </p>
+                </div>
+                <div id="rockclimbing" class="m-4 rounded-md shadow-sm p-2">
+                    <h3 class="text-xl mb-2">4. Rock Climbing</h3>
+                    <img class="w-full rounded-lg" src="assets/Hobbie4.jpg" alt="An image of a wall built for bouldering"/>
+                    <p class="text-gray-700 mt-2">
+                        Recently just got into rockclimbing, I mainly participate in Boundering as I prefer to challenge my
+                        grip strength and like to solve challenging routes. 
+                    </p>
+                </div>
+                <div id="Clubing" class="m-4 rounded-md shadow-sm p-2">
+                    <h3 class="text-xl mb-2">5. Clubing</h3>
+                    <img class="w-full rounded-lg" src="assets/Hobbie5.jpg" alt="An image of me vibing"/>
+                    <p class="text-gray-700 mt-2">
+                        Hear me out, I don't always go out drinking, I like to go out with my friends to hang out and sometimes drink. 
+                        Usually I prefer to Dance, laugh, play bar games and watch my friends as they attempt to perform sobriety test. 
+                        (Not an actual one, at the bar dummy!)
+                    </p>
+                </div>
+            </section>
+        </main> 
+
+        <footer>
+            <!--
+                Include a github link and sources that were used to devop this web site
+            -->
+        </footer>
+
+        <script>
+            function Menu(e) {
+                let list = document.querySelector("ul[name='navbarList']");
+
+                e.name === 'menu-outline' ? 
+                (e.name = "close",
+                list.classList.add('top-[80px]'),
+                list.classList.add('opacity-100'))
+                : 
+                (e.name = "menu-outline",
+                list.classList.remove('top-[80px]'),
+                list.classList.remove('opacity-100'))
+            }
+        </script>
+    </body>
+</html>

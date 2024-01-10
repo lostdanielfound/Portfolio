@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script> <!--Tailwind css import-->
+        <!--Ionicons import-->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <title>Portfolio</title>
+    </head>
+    <body class="bg-cyan-400">
+        <header>
+            <!--Navbar-->
+            <nav class="p-8 bg-white shadow md:flex md:items-center md:justify-between">
+                <!--Navbar Logo-->
+                <div class="flex justify-between items-center"> 
+                    <span class="text-2xl font-[Poppins] cursor-pointer">
+                        <a href="index.html">
+                            <img class="h-8 px-2 inline" src="assets/briefcase.png"/>
+                            My Portfolio
+                        </a>
+                    </span>
+
+                    <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                        <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+                    </span>
+                </div>
+                
+                <!--Navbar List-->
+                <ul name="navbarList" class="md:flex md:items-center md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                    <li class="mx-4 my-6 md:my-0">
+                        <a href="about.html" class="text-xl hover:text-cyan-500 duration-500">About me</a>
+                    </li>
+                    <li class="mx-4 my-6 md:my-0">
+                        <a href="hobbies.html" class="text-xl hover:text-cyan-500 duration-500">My hobbies</a>
+                    </li>
+                    <li class="mx-4 my-4 md:my-0">
+                        <a href="projects.html" class="text-xl hover:text-cyan-500 duration-500">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Main body, About-me -->
+        <main>
+            <section class="m-8 bg-white p-8 rounded-md shadow-md">
+                    <h1 class="text-3xl font-bold mb-4">Hoi, My name is Daniel Guzman</h1>
+                    <p class="text-gray-700 mb-6">Welcome to my Portfolio site, thanks for taking the time to learn about who I am as a person and what my skills are with respect to the field of Computer Science!</p>
+
+                    <h2 class="text-xl font-semibold mb-2">About Me</h2>
+                    <p class="text-gray-700 mb-6">
+                        Currently, I am a passionate Freelance Developer originally based in Browns Valley, California. 
+                        I grew up studying how to create fun little bash scripts at the age of 13, later my interest grew towards creating Websites that 
+                        I can show off to my friends and family. After highschool, I took this passion and used it to earn my A.S in Computer Science at 
+                        <a class="text-blue-500" href="https://yc.yccd.edu/">Yuba College</a> while minoring in Mathematics as well. I went off to then pursue my B.S in Computer Science 
+                        at <a class="text-blue-500" href="https://www.csuchico.edu/">CSU Chico State.</a> Was able to live on my own, built a nice reputation, and some how make it without 
+                        accumulating any loans. As of 2024, I am now seeking employment within either the IT industry or in Software Development in Sacramento.
+                    </p>
+
+                    <h2 class="text-xl font-semibold mb-2">Skills</h2>
+                    <ul class="list-disc pl-6">
+                        <li class="text-gray-700">Web Development</li>
+                        <li class="text-gray-700">AI Modeling (Entry level)</li>
+                        <li class="text-gray-700">IT Specialist</li>
+                    </ul>
+
+                    <h2 class="text-xl font-semibold mb-2 mt-6">Contact</h2>
+                    <p class="text-gray-700 mb-2">Feel free to reach out to me via email at <a href="mailto:danielsonguzman2000@gmail.com" class="text-blue-500">danielsonguzman2000@gmail.com</a></p>
+                    <p class="text-gray-700">Connect with me on <a href="https://www.linkedin.com/in/daniel-guzman-627766220/" target="_blank" class="text-blue-500">LinkedIn</a></p>
+            </section>
+        </main> 
+
+        <footer>
+            <!--
+                Include a github link and sources that were used to devop this web site
+            -->
+        </footer>
+
+        <script>
+            function Menu(e) {
+                let list = document.querySelector("ul[name='navbarList']");
+
+                e.name === 'menu-outline' ? 
+                (e.name = "close",
+                list.classList.add('top-[80px]'),
+                list.classList.add('opacity-100'))
+                : 
+                (e.name = "menu-outline",
+                list.classList.remove('top-[80px]'),
+                list.classList.remove('opacity-100'))
+            }
+        </script>
+    </body>
+</html>
